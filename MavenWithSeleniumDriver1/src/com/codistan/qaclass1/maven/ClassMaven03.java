@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class ClassMaven03 {
 	
 	@Test
-	public void amazonTest() {
+	public void amazonTest() throws InterruptedException {
 		
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shukhrat\\Documents\\ChromeDriver\\chromedriver.exe");		
@@ -17,6 +17,7 @@ public class ClassMaven03 {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.amazon.com/");
 		driver.findElement(By.xpath("//input[@id=\"twotabsearchtextbox\"]")).sendKeys("fidget" + Keys.ENTER);
+		Thread.sleep(3000);
 		driver.close();
 	}
 	
